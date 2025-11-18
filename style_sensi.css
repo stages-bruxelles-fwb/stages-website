@@ -1,0 +1,223 @@
+html,body { 
+  height:100%; margin:0; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+}
+
+/* full-screen loader that hosts the skull page in an iframe */
+#loader {
+  position:fixed;
+  inset:0;
+  background:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+#loader iframe { width:100%; height:100%; border:0; }
+
+/* main content is hidden until the loader is dismissed */
+#content { 
+  display:none; 
+  opacity:0; 
+  transition: opacity 300ms ease-in;
+  min-height: 100vh;
+  padding: 0;
+}
+#content.visible { display:block; opacity:1; }
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.header h1 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.campaign-info {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #000000;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Frames container */
+.frames-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Individual frame styling */
+.frame {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin: 30px 0;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Safety frame styling */
+.frame.safety-frame {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(139, 195, 74, 0.15)), 
+              rgba(255,255,255,0.95);
+  border: 2px solid #4CAF50;
+  box-shadow: 0 8px 32px rgba(76, 175, 80, 0.2);
+}
+
+.frame.safety-frame h2 {
+  color: #2E7D32;
+}
+
+.frame.safety-frame .safety-message {
+  background: rgba(76, 175, 80, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 4px solid #4CAF50;
+}
+
+.frame.safety-frame .safety-message p {
+  margin-bottom: 12px;
+  color: #1B5E20;
+  text-align: justify;
+}
+
+.frame:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 48px rgba(0,0,0,0.15);
+}
+
+.frame h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.frame-icon {
+  font-size: 2rem;
+  opacity: 0.8;
+}
+
+.frame p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #555;
+  text-align: justify;
+}
+
+.frame ul {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.frame li {
+  margin: 10px 0;
+  line-height: 1.5;
+  color: #555;
+}
+
+.highlight {
+  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.warning-box {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 4px solid #f39c12;
+}
+
+.action-box {
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 4px solid #17a2b8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px;
+  }
+  
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .frames-container {
+    padding: 20px 15px;
+  }
+  
+  .frame {
+    padding: 25px 20px;
+    margin: 20px 0;
+  }
+  
+  .frame h2 {
+    font-size: 1.4rem;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .frame-icon {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .header {
+    padding: 10px;
+  }
+  
+  .header h1 {
+    font-size: 1.3rem;
+  }
+  
+  .campaign-info {
+    font-size: 0.8rem;
+  }
+  
+  .frames-container {
+    padding: 15px 10px;
+  }
+  
+  .frame {
+    padding: 20px 15px;
+    margin: 15px 0;
+  }
+  
+  .frame h2 {
+    font-size: 1.2rem;
+  }
+}

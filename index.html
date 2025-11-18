@@ -9,15 +9,19 @@
   <body>
     <!-- HEY YOUNG ECAM STUDENT, IF YOU CLICK ON LOGIN AND YOU ACTUALLY PUT YOUR MAIL AND PASSWORD YOU LOSE -->
     <div class="banner">
-      <img src="images/logoFWBhorizontal.png" alt="FWB Logo" class="logo" />
+      <img src="images/stage.png" alt="FWB Logo" class="logo" />
+      <img src="images/AGES.png" alt="AGES logo" class="logo" />
     </div>
     <div class="form-structor">
       <div class="signup">
-        <h2 class="form-title" id="signup"><span>or</span>Sign up</h2>
+        <h2 class="form-title" id="signup"><span>or</span>Log In</h2>
 
         <label for="school">Choisis ton école</label>
 
         <select name="school" id="school">
+          <option value="Pas d'école sélectionnée">
+            --Sélectionne ton école--
+          </option>
           <option value="Ecam">Ecam</option>
           <option value="EPHEC">EPHEC</option>
           <option value="ErasmushogeschoolBrussel">
@@ -51,18 +55,8 @@
           class="submit-btn"
           onclick="document.location='sensibilisation.html'"
         >
-          signup
+          Log In
         </button>
-      </div>
-      <div class="login slide-up">
-        <div class="center">
-          <h2 class="form-title" id="login"><span>or</span>Log in</h2>
-          <div class="form-holder">
-            <input type="email" class="input" placeholder="Email" />
-            <input type="password" class="input" placeholder="Password" />
-          </div>
-          <button class="submit-btn">Log in</button>
-        </div>
       </div>
     </div>
     <script src="main.js"></script>
