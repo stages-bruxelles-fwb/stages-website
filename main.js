@@ -3,32 +3,41 @@ console.clear();
 const loginBtn = document.getElementById("login");
 const signupBtn = document.getElementById("signup");
 
-loginBtn.addEventListener("click", (e) => {
-  let parent = e.target.parentNode.parentNode;
-  Array.from(e.target.parentNode.parentNode.classList).find((element) => {
-    if (element !== "slide-up") {
-      parent.classList.add("slide-up");
-    } else {
-      signupBtn.parentNode.classList.add("slide-up");
-      parent.classList.remove("slide-up");
-    }
+if (loginBtn) {
+  loginBtn.addEventListener("click", (e) => {
+    let parent = e.target.parentNode.parentNode;
+    Array.from(e.target.parentNode.parentNode.classList).find((element) => {
+      if (element !== "slide-up") {
+        parent.classList.add("slide-up");
+      } else {
+        if (signupBtn && signupBtn.parentNode) {
+          signupBtn.parentNode.classList.add("slide-up");
+        }
+        parent.classList.remove("slide-up");
+      }
+    });
   });
-});
+}
 
-signupBtn.addEventListener("click", (e) => {
-  let parent = e.target.parentNode;
-  Array.from(e.target.parentNode.classList).find((element) => {
-    if (element !== "slide-up") {
-      parent.classList.add("slide-up");
-    } else {
-      loginBtn.parentNode.parentNode.classList.add("slide-up");
-      parent.classList.remove("slide-up");
-    }
+if (signupBtn) {
+  signupBtn.addEventListener("click", (e) => {
+    let parent = e.target.parentNode;
+    Array.from(e.target.parentNode.classList).find((element) => {
+      if (element !== "slide-up") {
+        parent.classList.add("slide-up");
+      } else {
+        if (loginBtn && loginBtn.parentNode && loginBtn.parentNode.parentNode) {
+          loginBtn.parentNode.parentNode.classList.add("slide-up");
+        }
+        parent.classList.remove("slide-up");
+      }
+    });
   });
-});
+}
 
 // Email domain mapping for schools
 const schoolEmailDomains = {
+  "Pas d'école sélectionnée": "",
   Ecam: "ecam.be",
   EPHEC: "ephec.be",
   ErasmushogeschoolBrussel: "erasmushogeschool.be",
@@ -48,24 +57,27 @@ const schoolEmailDomains = {
 const schoolSelect = document.getElementById("school");
 const emailInputs = document.querySelectorAll('input[type="email"]');
 
-if (schoolSelect) {
-  schoolSelect.addEventListener("change", (e) => {
-    const selectedSchool = e.target.value;
+function updateEmailPlaceholders() {
+  if (schoolSelect && emailInputs.length > 0) {
+    const selectedSchool = schoolSelect.value;
     const domain = schoolEmailDomains[selectedSchool];
 
     if (domain) {
       emailInputs.forEach((input) => {
         input.placeholder = `email@${domain}`;
       });
+    } else {
+      emailInputs.forEach((input) => {
+        input.placeholder = "Email";
+      });
     }
-  });
-
-  // Set initial placeholder based on default selection
-  const initialSchool = schoolSelect.value;
-  const initialDomain = schoolEmailDomains[initialSchool];
-  if (initialDomain) {
-    emailInputs.forEach((input) => {
-      input.placeholder = `email@${initialDomain}`;
-    });
   }
+}
+
+if (schoolSelect) {
+  // Update on change
+  schoolSelect.addEventListener("change", updateEmailPlaceholders);
+
+  // Set initial placeholder
+  updateEmailPlaceholders();
 }
