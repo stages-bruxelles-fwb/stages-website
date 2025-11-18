@@ -120,7 +120,7 @@ body {
 .iris:after {
   content: "";
   position: absolute;
-  background-color: #424565;
+  background-color: #abdb30;
   width: 50px;
   height: 50px;
   display: inline-block;
@@ -140,7 +140,7 @@ body {
 .eyeball:after {
   content: "";
   position: absolute;
-  background-color: #6c0000;
+  background-color: #ff0000;
   width: 20px;
   height: 20px;
   display: inline-block;
