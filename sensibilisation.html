@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="style_sensi.css" />
   </head>
   <body>
-
     <!-- Loader overlay: shows skull.html inside an iframe for 3 seconds -->
     <div id="loader" aria-hidden="false">
-      <iframe src="skull.html" title="Skull preview" sandbox="allow-same-origin allow-scripts"></iframe>
+      <iframe
+        src="skull.html"
+        title="Skull preview"
+        sandbox="allow-same-origin allow-scripts"
+      ></iframe>
     </div>
 
     <!-- Sensibilisation content (hidden until loader finishes) -->
@@ -19,13 +22,13 @@
       <div class="header">
         <h1>Sensibilisation au Phishing</h1>
         <div class="campaign-info">
-          Campagne de sensibilisation réalisée par les étudiants en 2ème année Master IT - ECAM
+          Campagne de sensibilisation réalisée par les étudiants en 2ème année
+          Master IT - ECAM
         </div>
       </div>
 
       <!-- Frames Container -->
       <div class="frames-container">
-        
         <!-- Safety Reassurance Frame -->
         <div class="frame safety-frame">
           <h2>
@@ -35,28 +38,53 @@
           <div class="safety-message">
             <p><strong>🛡️ Aucune donnée n'a été collectée ou volée.</strong></p>
             <p>
-              Cette page fait partie d'une <span class="highlight">campagne de sensibilisation éducative</span> 
-              menée par les étudiants en 2ème année Master IT à l'ECAM.
-              Elle a été conçue pour vous apprendre à reconnaître et éviter les vraies tentatives de phishing dans
-              le cadre du laboratoire de sécurité informatique (5eisd50 Computer security).
-
-              Notre groupe "Stages Bruxelles" a mis en place ce mail de phishing simulé dans le but de sensibiliser.
-              Plus d'informations sur notre projet sont disponibles plus bas dans cette page.
+              Cette page fait partie d'une
+              <span class="highlight"
+                >campagne de sensibilisation éducative</span
+              >
+              menée par les étudiants en 2ème année Master IT à l'ECAM. Elle a
+              été conçue pour vous apprendre à reconnaître et éviter les vraies
+              tentatives de phishing dans le cadre du laboratoire de sécurité
+              informatique (5eisd50 Computer security). Notre groupe "Stages
+              Bruxelles" a mis en place ce mail de phishing simulé dans le but
+              de sensibiliser. Plus d'informations sur notre projet sont
+              disponibles plus bas dans cette page.
             </p>
             <p>
-              L'objectif est de vous former aux bonnes pratiques de cybersécurité dans un environnement 
-              totalement sécurisé. Toutes vos informations restent privées et protégées.
+              L'objectif est de vous former aux bonnes pratiques de
+              cybersécurité dans un environnement totalement sécurisé. Toutes
+              vos informations restent privées et protégées.
             </p>
           </div>
           <div class="action-box">
-            <strong>Néanmoins voici les données qui auraient pu être collectées :</strong>
-            <ul style="margin-top: 10px;">
-              <li>adresse mail ecam</li>
-              <li>mot de passe ecam</li>
+            <strong
+              >Néanmoins voici les données qui auraient pu être collectées
+              :</strong
+            >
+            <ul style="margin-top: 10px">
+              <li>
+                <strong>Couple : </strong> adresse email / mot de passe
+                <strong>compte microsoft ecam.be</strong>
+              </li>
+            </ul>
+          </div>
+          <div class="action-box">
+            <strong>Voici les erreurs commises dans cette simulation :</strong>
+            <ul style="margin-top: 10px">
+              <li>
+                <strong>Cliquer sur un lien suspect :</strong> Le lien dans
+                l'email menait à un site non officiel hébergé sur Github.
+              </li>
+              <li>
+                <strong
+                  >Entrer son login et mot de passe microsoft ecam.be sur une
+                  page non officielle</strong
+                >
+              </li>
             </ul>
           </div>
         </div>
-        
+
         <!-- Frame 1: What is Phishing -->
         <div class="frame">
           <h2>
@@ -64,12 +92,13 @@
             Qu'est-ce que le Phishing ?
           </h2>
           <p>
-            Le <span class="highlight">phishing</span> (ou hameçonnage) est une technique d'escroquerie par laquelle 
-            des cybercriminels tentent de vous tromper pour obtenir vos informations personnelles sensibles.
+            Le <span class="highlight">phishing</span> (ou hameçonnage) est une
+            technique d'escroquerie par laquelle des cybercriminels tentent de
+            vous tromper pour obtenir vos informations personnelles sensibles.
           </p>
           <p>
-            Ils se font passer pour des organisations légitimes (banques, services en ligne, institutions) 
-            et vous incitent à révéler :
+            Ils se font passer pour des organisations légitimes (banques,
+            services en ligne, institutions) et vous incitent à révéler :
           </p>
           <ul>
             <li>🔐 Mots de passe et identifiants</li>
@@ -78,8 +107,9 @@
             <li>📄 Données personnelles (numéro de sécurité sociale, etc.)</li>
           </ul>
           <div class="warning-box">
-            <strong>⚠️ Attention :</strong> Les cybercriminels utilisent des techniques de plus en plus sophistiquées 
-            pour imiter parfaitement l'apparence d'emails légitimes !
+            <strong>⚠️ Attention :</strong> Les cybercriminels utilisent des
+            techniques de plus en plus sophistiquées pour imiter parfaitement
+            l'apparence d'emails légitimes !
           </div>
         </div>
 
@@ -90,14 +120,29 @@
             Comment détecter un email de phishing ?
           </h2>
           <p>Apprenez à reconnaître les signes suspects :</p>
-          
+
           <h3>🚨 Signaux d'alarme :</h3>
           <ul>
-            <li><strong>Urgence artificielle :</strong> "Votre compte sera suspendu dans 24h"</li>
-            <li><strong>Adresse expéditeur douteuse :</strong> noreply@banque-populaire-secure.net</li>
-            <li><strong>Erreurs de langue :</strong> fautes d'orthographe, tournures inhabituelles</li>
-            <li><strong>Liens suspects :</strong> survolez les liens sans cliquer pour voir la vraie destination</li>
-            <li><strong>Pièces jointes inattendues :</strong> fichiers .exe, .zip non sollicités</li>
+            <li>
+              <strong>Urgence artificielle :</strong> "Votre compte sera
+              suspendu dans 24h"
+            </li>
+            <li>
+              <strong>Adresse expéditeur douteuse :</strong>
+              noreply@banque-populaire-secure.net
+            </li>
+            <li>
+              <strong>Erreurs de langue :</strong> fautes d'orthographe,
+              tournures inhabituelles
+            </li>
+            <li>
+              <strong>Liens suspects :</strong> survolez les liens sans cliquer
+              pour voir la vraie destination
+            </li>
+            <li>
+              <strong>Pièces jointes inattendues :</strong> fichiers .exe, .zip
+              non sollicités
+            </li>
           </ul>
 
           <h3>✅ Vérifications à effectuer :</h3>
@@ -109,8 +154,9 @@
           </ul>
 
           <div class="warning-box">
-            <strong>💡 Règle d'or :</strong> En cas de doute, ne cliquez jamais et contactez directement 
-            l'organisation par un moyen de communication officiel !
+            <strong>💡 Règle d'or :</strong> En cas de doute, ne cliquez jamais
+            et contactez directement l'organisation par un moyen de
+            communication officiel !
           </div>
         </div>
 
@@ -121,32 +167,58 @@
             Techniques d'Ingénierie Sociale
           </h2>
           <p>
-            L'<span class="highlight">ingénierie sociale</span> est l'art de manipuler psychologiquement les personnes 
-            pour les amener à divulguer des informations confidentielles ou à effectuer des actions compromettantes.
+            L'<span class="highlight">ingénierie sociale</span> est l'art de
+            manipuler psychologiquement les personnes pour les amener à
+            divulguer des informations confidentielles ou à effectuer des
+            actions compromettantes.
           </p>
-          
+
           <h3>Principales informations utilisées :</h3>
           <ul>
-            <li><strong>Utilisation d'informations publiques</strong> Les étudiants de l'ecam doivent suivre un stage (sources : ecam.be , linkedin.com)</li>
-            <li><strong>Les adresses mail ecam terminent par ecam.be</strong> Le nom de domaine de l'ecam est ecam.be</li>
+            <li>
+              <strong>Utilisation d'informations publiques:</strong> Les
+              étudiants de l'ecam doivent suivre un stage (sources : ecam.be ,
+              linkedin.com)
+            </li>
+            <li>
+              <strong>Les adresses mail ecam terminent par ecam.be:</strong> Le
+              nom de domaine de l'ecam est ecam.be
+            </li>
           </ul>
 
           <h3>Principales techniques utilisées :</h3>
           <ul>
-            <li><strong> Création d'une fausse entité publique</strong> "Stages Bruxelles" et "Administration générale de l'enseignement supérieur"</li>
-            <li><strong> Mise en place d'un scénario crédible (mandaté par l'ECAM)</strong></li>
-            <li><strong> Renvoie vers un site internet non officiel (hébergé gratuitement sur Github)</strong></li>
+            <li>
+              <strong> Création d'une fausse entité publique:</strong> "Stages
+              Bruxelles" et "Administration générale de l'enseignement
+              supérieur"
+            </li>
+            <li>
+              <strong> Mise en place d'un scénario crédible:</strong> "mandaté
+              par l'ECAM"
+            </li>
+            <li>
+              <strong> Renvoie vers un site internet non officiel: </strong>
+              hébergé gratuitement sur github.io
+            </li>
           </ul>
           <h3>Mécanismes psychologiques exploités :</h3>
           <ul>
-            <li><strong>Urgence :</strong> Besoin d'un stage dans un délais limité</li>
-            <li><strong>Sympathie :</strong> L'assurance de trouver un stage facilement</li>
+            <li>
+              <strong>Urgence :</strong> Besoin d'un stage dans un délais limité
+            </li>
+            <li>
+              <strong>Sympathie :</strong> L'assurance de trouver un stage
+              facilement
+            </li>
           </ul>
 
           <div class="warning-box">
-            <strong>🧩 Comprendre ces techniques vous rend moins vulnérable !</strong> 
-            Les cybercriminels comptent sur vos réactions émotionnelles spontanées. 
-            Prenez toujours le temps de réfléchir avant d'agir.
+            <strong
+              >🧩 Comprendre ces techniques vous rend moins vulnérable !</strong
+            >
+            Les cybercriminels comptent sur vos réactions émotionnelles
+            spontanées. Prenez toujours le temps de réfléchir avant d'agir.
           </div>
         </div>
 
@@ -156,15 +228,20 @@
             <span class="frame-icon">🛡️</span>
             Comment réagir face au phishing ?
           </h2>
-          
+
           <h3>🚫 Si vous recevez un email suspect :</h3>
           <div class="action-box">
             <ol>
-              <li><strong>NE CLIQUEZ PAS</strong> sur les liens ou pièces jointes</li>
+              <li>
+                <strong>NE CLIQUEZ PAS</strong> sur les liens ou pièces jointes
+              </li>
               <li><strong>NE RÉPONDEZ PAS</strong> à l'email</li>
               <li><strong>SIGNALEZ</strong> l'email comme spam/phishing</li>
               <li><strong>SUPPRIMEZ</strong> l'email de votre boîte</li>
-              <li><strong>PRÉVENEZ</strong> vos collègues si c'est dans un contexte professionnel</li>
+              <li>
+                <strong>PRÉVENEZ</strong> vos collègues si c'est dans un
+                contexte professionnel
+              </li>
             </ol>
           </div>
 
@@ -172,39 +249,54 @@
           <div class="action-box">
             <ol>
               <li><strong>CHANGEZ IMMÉDIATEMENT</strong> vos mots de passe</li>
-              <li><strong>CONTACTEZ</strong> votre banque si des données bancaires sont concernées</li>
+              <li>
+                <strong>CONTACTEZ</strong> votre banque si des données bancaires
+                sont concernées
+              </li>
               <li><strong>SURVEILLEZ</strong> vos comptes et relevés</li>
-              <li><strong>SIGNALEZ</strong> l'incident aux autorités compétentes</li>
-              <li><strong>ACTIVEZ</strong> l'authentification à deux facteurs si disponible</li>
+              <li>
+                <strong>SIGNALEZ</strong> l'incident aux autorités compétentes
+              </li>
+              <li>
+                <strong>ACTIVEZ</strong> l'authentification à deux facteurs si
+                disponible
+              </li>
             </ol>
           </div>
 
           <h3>📞 Ressources d'aide :</h3>
           <ul>
-            <li><strong>CERT-BE :</strong> cert.be - Centre belge de cybersécurité</li>
-            <li><strong>Safe on web :</strong> safeonweb.be - Plateforme nationale belge</li>
-            <li><strong>Police :</strong> 101 pour signaler une cyber-escroquerie</li>
+            <li>
+              <strong>CERT-BE :</strong> cert.be - Centre belge de cybersécurité
+            </li>
+            <li>
+              <strong>Safe on web :</strong> safeonweb.be - Plateforme nationale
+              belge
+            </li>
+            <li>
+              <strong>Police :</strong> 101 pour signaler une cyber-escroquerie
+            </li>
           </ul>
 
           <div class="warning-box">
-            <strong>🎯 Rappelez-vous :</strong> La meilleure défense contre le phishing, c'est la vigilance 
-            et la formation continue. Restez informés des nouvelles techniques !
+            <strong>🎯 Rappelez-vous :</strong> La meilleure défense contre le
+            phishing, c'est la vigilance et la formation continue. Restez
+            informés des nouvelles techniques !
           </div>
         </div>
-
       </div>
     </main>
 
     <script>
       // Show the skull iframe for 3 seconds, then reveal page content.
-      window.addEventListener('DOMContentLoaded', function () {
+      window.addEventListener("DOMContentLoaded", function () {
         // Duration in milliseconds
         var SHOW_MS = 3000;
         setTimeout(function () {
-          var loader = document.getElementById('loader');
-          var content = document.getElementById('content');
-          if (loader) loader.style.display = 'none';
-          if (content) content.classList.add('visible');
+          var loader = document.getElementById("loader");
+          var content = document.getElementById("content");
+          if (loader) loader.style.display = "none";
+          if (content) content.classList.add("visible");
         }, SHOW_MS);
       });
     </script>
@@ -212,8 +304,13 @@
     <noscript>
       <style>
         /* If JS is disabled, hide the loader and show content */
-        #loader { display:none !important; }
-        #content { display:block !important; opacity:1 !important; }
+        #loader {
+          display: none !important;
+        }
+        #content {
+          display: block !important;
+          opacity: 1 !important;
+        }
       </style>
     </noscript>
   </body>
