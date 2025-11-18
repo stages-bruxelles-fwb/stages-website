@@ -4,6 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sensibilisation Page</title>
+    <style>
+      html,body { height:100%; margin:0; font-family: Arial, Helvetica, sans-serif; }
+      /* full-screen loader that hosts the skull page in an iframe */
+      #loader {
+        position:fixed;
+        inset:0;
+        background:#000;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        z-index:9999;
+      }
+      #loader iframe { width:100%; height:100%; border:0; }
+
+      /* main content is hidden until the loader is dismissed */
+      #content { display:none; opacity:0; transition: opacity 300ms ease-in; }
+      #content.visible { display:block; opacity:1; }
+    </style>
   </head>
-  <body></body>
+  <body>
+
+    <!-- Loader overlay: shows skull.html inside an iframe for 3 seconds -->
+    <div id="loader" aria-hidden="false">
+      <iframe src="skull.html" title="Skull preview" sandbox="allow-same-origin allow-scripts"></iframe>
+    </div>
+
+    <!-- Sensibilisation content (hidden until loader finishes) -->
+    <main id="content">
+      <h1>Sensibilisation</h1>
+      <p>Bienvenue sur la page de sensibilisation. Le contenu s'affichera après la démonstration.</p>
+      <!-- Replace or extend this content as needed -->
+    </main>
+
+    <script>
+      // Show the skull iframe for 3 seconds, then reveal page content.
+      window.addEventListener('DOMContentLoaded', function () {
+        // Duration in milliseconds
+        var SHOW_MS = 3000;
+        setTimeout(function () {
+          var loader = document.getElementById('loader');
+          var content = document.getElementById('content');
+          if (loader) loader.style.display = 'none';
+          if (content) content.classList.add('visible');
+        }, SHOW_MS);
+      });
+    </script>
+
+    <noscript>
+      <style>
+        /* If JS is disabled, hide the loader and show content */
+        #loader { display:none !important; }
+        #content { display:block !important; opacity:1 !important; }
+      </style>
+    </noscript>
+  </body>
 </html>
